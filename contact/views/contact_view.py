@@ -3,8 +3,6 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from ..models import Contact 
 
-# Create your views here.
-
 def initial(request):
     contacts = Contact.objects.filter(show=True).order_by('-id')
 
