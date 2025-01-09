@@ -20,3 +20,6 @@ class ContactForm(forms.ModelForm):
             )
 
         return super().clean()
+
+    def __init__(self,  *args, **kwargs):
+        super().__init__(*args, **kwargs)
