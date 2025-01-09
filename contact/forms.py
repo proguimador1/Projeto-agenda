@@ -10,12 +10,13 @@ class ContactForm(forms.ModelForm):
     def clean(self):
         cleaned_data = self.cleaned_data
 
-        self.add_error(
-            'first_name',
-            ValidationError(
-                'Error message',
-                code='Invalid'
+        if 1==0:
+            self.add_error(
+                'first_name',
+                ValidationError(
+                    'Error message',
+                    code='Invalid'
+                )
             )
-        )
 
         return super().clean()
