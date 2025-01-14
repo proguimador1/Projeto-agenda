@@ -65,3 +65,10 @@ def update(request, contact_id):
         'form_action': form_action
         }
         )
+
+def delete(request, contact_id):
+    contact = get_object_or_404(Contact, id = contact_id, show = True)
+
+    contact.delete()
+
+    return redirect('contact:home')
